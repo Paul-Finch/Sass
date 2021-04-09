@@ -1,0 +1,45 @@
+/*
+@mixin flexCenter($bgColor) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: $bgColor;
+}
+*/
+
+header{
+    //@include flexCenter($primaryColor);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: $primaryColor;
+
+    button{
+        background: green;
+        width: random(500) + 200px;
+
+        &:hover{
+            background: lightgreen;
+        }
+        &::after{
+            content: '!';
+        }
+    }
+}
+
+section{
+    //@include flexCenter(lightblue);
+    @extend header;
+    background: lightblue;
+}
+
+$cols: 3;
+@for $i from 1 through $cols{
+    .div-#{$i}{
+        border: 1px solid black;
+        width: 30px * $i;
+    }
+}

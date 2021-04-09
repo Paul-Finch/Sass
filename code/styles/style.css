@@ -1,0 +1,55 @@
+/*
+@mixin flexCenter($bgColor) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: $bgColor;
+}
+*/
+header, section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background: red;
+}
+
+header button, section button {
+  background: green;
+  width: 240px;
+}
+
+header button:hover, section button:hover {
+  background: lightgreen;
+}
+
+header button::after, section button::after {
+  content: '!';
+}
+
+section {
+  background: lightblue;
+}
+
+.div-1 {
+  border: 1px solid black;
+  width: 30px;
+}
+
+.div-2 {
+  border: 1px solid black;
+  width: 60px;
+}
+
+.div-3 {
+  border: 1px solid black;
+  width: 90px;
+}
+/*# sourceMappingURL=style.css.map */
